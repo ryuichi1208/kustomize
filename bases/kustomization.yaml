@@ -3,4 +3,4 @@
 commonLabels:
   app: test
 resources:
-- deployment.yaml
+- ./t/deployment.yaml
