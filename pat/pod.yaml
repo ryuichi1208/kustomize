@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Pod
+metadata:
+  name: simple-app
+spec:
+  containers:
+    - name: simple-app
+      image: nginx:latest
+      ports:
+        - name: port1
+          containerPort: 1000

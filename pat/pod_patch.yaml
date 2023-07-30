@@ -1,0 +1,10 @@
+- op: add
+  path: /spec/containers/0/ports/-
+  value:
+    name: port2
+    containerPort: 2000
+- op: add
+  path: /spec/containers/0/ports/-
+  value:
+    name: port3
+    containerPort: 3000

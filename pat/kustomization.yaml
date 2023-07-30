@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namePrefix: test-
+commonLabels:
+  hoge: fuga
+  test: tast
+
+resources:
+  - pod.yaml
+
+patches:
+  - target:
+      kind: Pod
+    path: pod_patch.yaml

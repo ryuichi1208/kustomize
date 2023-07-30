@@ -1,0 +1,5 @@
+releases:
+  - name: argocd
+    namespace: argocd
+    chart: argo/argo-cd
+    version: 5.42.0
