@@ -2,5 +2,6 @@
 #kind: Kustomization
 commonLabels:
   app: test
+  app2: tst2
 resources:
 - ./t/deployment.yaml
