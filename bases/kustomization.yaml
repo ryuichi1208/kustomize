@@ -2,6 +2,6 @@
 #kind: Kustomization
 commonLabels:
   app: test
-  app2: tst2
+namePrefix: hoge-
 resources:
 - ./t/deployment.yaml
