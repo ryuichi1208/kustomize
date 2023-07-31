@@ -1,0 +1,148 @@
+Name:         test-app
+Namespace:    argocd
+Labels:       <none>
+Annotations:  <none>
+API Version:  argoproj.io/v1alpha1
+Kind:         Application
+Metadata:
+  Creation Timestamp:  2023-07-30T12:40:57Z
+  Generation:          176
+  Resource Version:    6716
+  UID:                 5a349e7f-72a1-475f-8d8e-528fe244eb09
+Spec:
+  Destination:
+    Namespace:  default
+    Server:     https://kubernetes.default.svc
+  Project:      default
+  Source:
+    Path:             ./bases/
+    Repo URL:         https://github.com/ryuichi1208/kustomize.git
+    Target Revision:  HEAD
+  Sync Policy:
+    Automated:
+Status:
+  Health:
+    Status:  Healthy
+  History:
+    Deploy Started At:  2023-07-30T12:59:11Z
+    Deployed At:        2023-07-30T12:59:12Z
+    Id:                 0
+    Revision:           ba9bbaa709b3e9cda8ff5c9e74938150456edb5f
+    Source:
+      Directory:
+        Jsonnet:
+          Tlas:
+            Name:
+            Value:
+      Path:             bases
+      Repo URL:         https://github.com/ryuichi1208/kustomize.git
+      Target Revision:  HEAD
+    Deploy Started At:  2023-07-30T13:20:25Z
+    Deployed At:        2023-07-30T13:20:26Z
+    Id:                 1
+    Revision:           4bdc34664a9fda53283bdbae2717597aa64aeb1c
+    Source:
+      Directory:
+        Jsonnet:
+          Tlas:
+            Name:
+            Value:
+      Path:             ./bases/
+      Repo URL:         https://github.com/ryuichi1208/kustomize.git
+      Target Revision:  HEAD
+    Deploy Started At:  2023-07-30T13:22:46Z
+    Deployed At:        2023-07-30T13:22:46Z
+    Id:                 2
+    Revision:           4bdc34664a9fda53283bdbae2717597aa64aeb1c
+    Source:
+      Path:             ./bases/
+      Repo URL:         https://github.com/ryuichi1208/kustomize.git
+      Target Revision:  HEAD
+    Deploy Started At:  2023-07-30T13:24:31Z
+    Deployed At:        2023-07-30T13:24:31Z
+    Id:                 3
+    Revision:           4bdc34664a9fda53283bdbae2717597aa64aeb1c
+    Source:
+      Path:             ./bases/
+      Repo URL:         https://github.com/ryuichi1208/kustomize.git
+      Target Revision:  HEAD
+    Deploy Started At:  2023-07-30T13:26:31Z
+    Deployed At:        2023-07-30T13:26:32Z
+    Id:                 4
+    Revision:           8bfcdaec841146243d91d94d6ba0781f7c05301a
+    Source:
+      Path:             ./bases/
+      Repo URL:         https://github.com/ryuichi1208/kustomize.git
+      Target Revision:  HEAD
+  Operation State:
+    Finished At:  2023-07-30T13:26:32Z
+    Message:      successfully synced (all tasks run)
+    Operation:
+      Initiated By:
+        Username:  admin
+      Retry:
+      Sync:
+        Revision:  8bfcdaec841146243d91d94d6ba0781f7c05301a
+        Sync Strategy:
+          Hook:
+    Phase:       Succeeded
+    Started At:  2023-07-30T13:26:31Z
+    Sync Result:
+      Resources:
+        Group:       apps
+        Hook Phase:  Succeeded
+        Kind:        Deployment
+        Message:     ignored (requires pruning)
+        Name:        deployment-test-2
+        Namespace:   default
+        Status:      PruneSkipped
+        Sync Phase:  Sync
+        Version:     v1
+        Group:       apps
+        Hook Phase:  Running
+        Kind:        Deployment
+        Message:     deployment.apps/hoge-deployment-test-2 created
+        Name:        hoge-deployment-test-2
+        Namespace:   default
+        Status:      Synced
+        Sync Phase:  Sync
+        Version:     v1
+      Revision:      8bfcdaec841146243d91d94d6ba0781f7c05301a
+      Source:
+        Path:             ./bases/
+        Repo URL:         https://github.com/ryuichi1208/kustomize.git
+        Target Revision:  HEAD
+  Reconciled At:          2023-07-30T13:36:05Z
+  Resources:
+    Group:  apps
+    Health:
+      Status:          Healthy
+    Kind:              Deployment
+    Name:              deployment-test-2
+    Namespace:         default
+    Requires Pruning:  true
+    Status:            OutOfSync
+    Version:           v1
+    Group:             apps
+    Health:
+      Status:   Healthy
+    Kind:       Deployment
+    Name:       hoge-deployment-test-2
+    Namespace:  default
+    Status:     Synced
+    Version:    v1
+  Source Type:  Kustomize
+  Summary:
+    Images:
+      nginx:alpine
+  Sync:
+    Compared To:
+      Destination:
+        Namespace:  default
+        Server:     https://kubernetes.default.svc
+      Source:
+        Path:             ./bases/
+        Repo URL:         https://github.com/ryuichi1208/kustomize.git
+        Target Revision:  HEAD
+    Revision:             8bfcdaec841146243d91d94d6ba0781f7c05301a
+    Status:               OutOfSync
